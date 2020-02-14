@@ -3,7 +3,9 @@
 This repository contains the `abaisero.sty` latex style package, which contains
 a bunch of commands and definitions I use very frequently.
 
-File `test.tex` contains a listing of all the provided commands.
+[This document][example] shows all the provided commands.
+
+[example]: example.pdf
 
 ## Options
 
