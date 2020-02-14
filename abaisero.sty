@@ -1,0 +1,102 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{abaisero}[2020/01/01 package abaisero]
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+\DeclareOption{all}{%
+
+  \ExecuteOptions{math}
+  \ExecuteOptions{linalg}
+  \ExecuteOptions{optim}
+  \ExecuteOptions{stats}
+  \ExecuteOptions{dists}
+  \ExecuteOptions{ml}
+  \ExecuteOptions{rl}
+
+}
+
+\DeclareOption{math}{%
+
+  \newcommand\naturalset{\mathbb{Z}}
+  \newcommand\realset{\mathbb{R}}
+
+  \DeclareMathOperator*\softmax{softmax}
+  \DeclareMathOperator*\softmin{softmin}
+  \DeclareMathOperator*\sign{sign}
+
+}
+
+\DeclareOption{linalg}{%
+
+  \DeclareMathOperator*\diag{diag}
+  \DeclareMathOperator*\rank{rank}
+  \DeclareMathOperator*\trace{tr}
+
+  \DeclareMathOperator*\colspace{col}
+  \DeclareMathOperator*\spanspace{span}
+
+  \newcommand\T{^\top}
+  \newcommand\I{^{-1}}
+  \newcommand\PI{^\dagger}
+  \newcommand\IT{^{-\top}}
+
+}
+
+\DeclareOption{optim}{%
+
+  \newcommand\loss{\mathcal{L}}
+
+  \DeclareMathOperator*\argmax{argmax}
+  \DeclareMathOperator*\argmin{argmin}
+
+}
+
+\DeclareOption{stats}{%
+
+  \DeclareMathOperator*\Cov{\mathbb{C}}
+  \DeclareMathOperator*\Ent{\mathbb{H}}
+  \DeclareMathOperator*\Exp{\mathbb{E}}
+  \DeclareMathOperator*\Ind{\mathbb{I}}
+  \DeclareMathOperator*\KL{\operatorname{KL}}
+  \DeclareMathOperator*\Var{\mathbb{V}}
+
+}
+
+\DeclareOption{dists}{%
+
+  \newcommand\Categorical{\operatorname{Categorical}}
+  \newcommand\Dirichlet{\operatorname{Dirichlet}}
+  \newcommand\Normal{\operatorname{Normal}}
+  \newcommand\Uniform{\operatorname{Uniform}}
+
+}
+
+\DeclareOption{ml}{%
+
+  \newcommand\data{{\mathcal{D}}}
+
+}
+
+\DeclareOption{rl}{%
+
+  \newcommand\aset{\mathcal{A}}
+  \newcommand\bset{\mathcal{B}}
+  \newcommand\hset{\mathcal{H}}
+  \newcommand\oset{\mathcal{O}}
+  \newcommand\rset{\mathcal{R}}
+  \newcommand\sset{\mathcal{S}}
+
+  \newcommand\dfn{\mathrm{D}}
+  \newcommand\ofn{\mathrm{O}}
+  \newcommand\rfn{\mathrm{R}}
+  \newcommand\tfn{\mathrm{T}}
+
+}
+
+\ProcessOptions\relax
+
+%% Traditional LaTeX or TeX follows...
+% ...
+
+\endinput
