@@ -45,8 +45,6 @@
 
 \DeclareOption{optim}{%
 
-  \newcommand\loss{\mathcal{L}}
-
   \DeclareMathOperator*\argmax{argmax}
   \DeclareMathOperator*\argmin{argmin}
 
@@ -55,10 +53,12 @@
 \DeclareOption{stats}{%
 
   \DeclareMathOperator*\Cov{\mathbb{C}}
+  \DeclareMathOperator*\DKL{{D_\text{KL}}}
   \DeclareMathOperator*\Ent{\mathbb{H}}
   \DeclareMathOperator*\Exp{\mathbb{E}}
   \DeclareMathOperator*\Ind{\mathbb{I}}
   \DeclareMathOperator*\KL{\operatorname{KL}}
+  \DeclareMathOperator*\MI{\mathbb{I}}
   \DeclareMathOperator*\Var{\mathbb{V}}
 
 }
@@ -75,6 +75,9 @@
 \DeclareOption{ml}{%
 
   \newcommand\data{{\mathcal{D}}}
+  \newcommand\loss{\mathcal{L}}
+  \newcommand\nll{{\operatorname{nll}}}
+  \newcommand\mse{{\operatorname{MSE}}}
 
 }
 

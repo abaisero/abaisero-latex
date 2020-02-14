@@ -9,124 +9,188 @@
 
 \maketitle
 
-\begin{description}
+\section*{Option [math]}
+
+\begin{tabular}{cll}
   %
-  \item[math] Mathematical commands
-    %
-    \begin{description}
-      %
-      \item[\textbackslash naturalset] $\naturalset$ the set of natural numbers
-      %
-      \item[\textbackslash realset] $\realset$ the set of real numbers
-      %
-      \item[\textbackslash sign] $\sign$
-      %
-      \item[\textbackslash softmax] $\softmax$
-      %
-      \item[\textbackslash softmin] $\softmin$
-      %
-    \end{description}
-    %
-  \item[linalg] Linear algebra commands
-    %
-    \begin{description}
-      %
-      \item[\textbackslash diag] $\diag$
-      %
-      \item[\textbackslash rank] $\rank$
-      %
-      \item[\textbackslash trace] $\trace$
-      %
-      \item[\textbackslash colspace] $\colspace$
-      %
-      \item[\textbackslash spanspace] $\spanspace$
-      %
-      \item[\textbackslash T] $\T$
-      %
-      \item[\textbackslash I] $\I$
-      %
-      \item[\textbackslash PI] $\PI$
-      %
-      \item[\textbackslash IT] $\IT$
-      %
-    \end{description}
-    %
-  \item[optim] Optimization
-    %
-    \begin{description}
-      %
-      \item[\textbackslash argmax] $\argmax$
-      %
-      \item[\textbackslash argmin] $\argmin$
-      %
-    \end{description}
-    %
-  \item[stats] Statistics
-    %
-    \begin{description}
-      %
-      \item[\textbackslash Cov] $\Cov$ covariance
-      %
-      \item[\textbackslash Ent] $\Ent$ entropy
-      %
-      \item[\textbackslash Exp] $\Exp$ expectation
-      %
-      \item[\textbackslash Ind] $\Ind$ indicator function
-      %
-      \item[\textbackslash KL] $\KL$ KL-divergence
-      %
-      \item[\textbackslash Var] $\Var$ variance
-      %
-    \end{description}
-    %
-  \item[dists] Distributions
-    %
-    \begin{description}
-      %
-      \item[\textbackslash Categorical] $\Categorical$
-      %
-      \item[\textbackslash Dirichlet] $\Dirichlet$
-      %
-      \item[\textbackslash Normal] $\Normal$
-      %
-      \item[\textbackslash Uniform] $\Uniform$
-      %
-    \end{description}
-    %
-  \item[ml] Machine learning
-    %
-    \begin{description}
-      %
-      \item[\textbackslash data] $\data$ data set
-      %
-    \end{description}
-    %
-  \item[rl] Reinforcement learning
-    %
-    \begin{description}
-      %
-      \item[\textbackslash aset] $\aset$ action set
-      %
-      \item[\textbackslash bset] $\bset$ belief set
-      %
-      \item[\textbackslash hset] $\hset$ history set
-      %
-      \item[\textbackslash oset] $\oset$ observation set
-      %
-      \item[\textbackslash rset] $\rset$ reward set
-      %
-      \item[\textbackslash sset] $\sset$ state set
-      %
-      \item[\textbackslash dfn] $\dfn$ dynamics function
-      %
-      \item[\textbackslash ofn] $\ofn$ observation function
-      %
-      \item[\textbackslash rfn] $\rfn$ reward function
-      %
-      \item[\textbackslash tfn] $\tfn$ state transition function
-      %
-    \end{description}
-    %
-\end{description}
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\naturalset$ & \texttt{ \textbackslash naturalset } & the set of natural numbers \\
+  %
+  $\realset$ & \texttt{ \textbackslash realset } & the set of real numbers \\
+  %
+  $\sign$ & \texttt{ \textbackslash sign } & \\
+  %
+  $\softmax$ & \texttt{ \textbackslash softmax } & \\
+  %
+  $\softmin$ & \texttt{ \textbackslash softmin } & \\
+  %
+\end{tabular}
+
+\section*{Option [linalg]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\diag$ & \texttt{ \textbackslash diag } & \\
+  %
+  $\rank$ & \texttt{ \textbackslash rank } & \\
+  %
+  $\trace$ & \texttt{ \textbackslash trace } & \\
+  %
+  $\colspace$ & \texttt{ \textbackslash colspace } & \\
+  %
+  $\spanspace$ & \texttt{ \textbackslash spanspace } & \\
+  %
+  $\T$ & \texttt{ \textbackslash T } & Transpose \\
+  %
+  $\I$ & \texttt{ \textbackslash I } & Inverse \\
+  %
+  $\PI$ & \texttt{ \textbackslash PI } & Pseudo-inverse \\
+  %
+  $\IT$ & \texttt{ \textbackslash IT } & Inverse transpose \\
+  %
+\end{tabular}
+
+\section*{Option [optim]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\argmax$ & \texttt{ \textbackslash argmax } & \\
+  %
+  $\argmin$ & \texttt{ \textbackslash argmin } & \\
+  %
+\end{tabular}
+
+\section*{Option [stats]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\Cov$ & \texttt{ \textbackslash Cov } & Covariance \\
+  %
+  $\Ent$ & \texttt{ \textbackslash Ent } & Entropy \\
+  %
+  $\Exp$ & \texttt{ \textbackslash Exp } & Expectation \\
+  %
+  $\Ind$ & \texttt{ \textbackslash Ind } & indicator function \\
+  %
+  $\KL$ & \texttt{ \textbackslash KL } & KL-divergence \\
+  %
+  $\DKL$ & \texttt{ \textbackslash DKL } & KL-divergence (alternative) \\
+  %
+  $\MI$ & \texttt{ \textbackslash MI } & Mutual Information \\
+  %
+  $\Var$ & \texttt{\textbackslash Var} & Variance \\
+  %
+\end{tabular}
+
+\section*{Option [dists]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\Categorical$ & \texttt{ \textbackslash Categorical } & $\Categorical$ \\
+  %
+  $\Dirichlet$ & \texttt{ \textbackslash Dirichlet } & $\Dirichlet$ \\
+  %
+  $\Normal$ & \texttt{ \textbackslash Normal } & $\Normal$ \\
+  %
+  $\Uniform$ & \texttt{ \textbackslash Uniform } & $\Uniform$ \\
+  %
+\end{tabular}
+
+\section*{Option [ml]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\data$ & \texttt{ \textbackslash data } & Data set \\
+  %
+  $\loss$ & \texttt{ \textbackslash loss } & Loss function \\
+  %
+  $\nll$ & \texttt{ \textbackslash nll } & Neg-log-likelihood \\
+  %
+  $\mse$ & \texttt{ \textbackslash mse } & Mean-squared-error \\
+  %
+\end{tabular}
+
+\section*{Option [rl]}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\aset$ & \texttt{ \textbackslash aset } & Action set \\
+  %
+  $\bset$ & \texttt{ \textbackslash bset } & Belief set \\
+  %
+  $\hset$ & \texttt{ \textbackslash hset } & History set \\
+  %
+  $\oset$ & \texttt{ \textbackslash oset } & Observation set \\
+  %
+  $\rset$ & \texttt{ \textbackslash rset } & Reward set \\
+  %
+  $\sset$ & \texttt{ \textbackslash sset } & State set \\
+  %
+  $\dfn$ & \texttt{ \textbackslash dfn } & Dynamics function \\
+  %
+  $\ofn$ & \texttt{ \textbackslash ofn } & Observation function \\
+  %
+  $\rfn$ & \texttt{ \textbackslash rfn } & Reward function \\
+  %
+  $\tfn$ & \texttt{ \textbackslash tfn } & Transition function \\
+  %
+\end{tabular}
+
+\section{RL symbols}
+
+\begin{tabular}{cll}
+  %
+  Symbol & Command & Description \\
+  %
+  \hline
+  %
+  $\aset$ & \texttt{ \textbackslash aset } & Action set \\
+  %
+  $\bset$ & \texttt{ \textbackslash bset } & Belief set \\
+  %
+  $\hset$ & \texttt{ \textbackslash hset } & History set \\
+  %
+  $\oset$ & \texttt{ \textbackslash oset } & Observation set \\
+  %
+  $\rset$ & \texttt{ \textbackslash rset } & Reward set \\
+  %
+  $\sset$ & \texttt{ \textbackslash sset } & State set \\
+  %
+  $\dfn$ & \texttt{ \textbackslash dfn } & Dynamics function \\
+  %
+  $\ofn$ & \texttt{ \textbackslash ofn } & Observation function \\
+  %
+  $\rfn$ & \texttt{ \textbackslash rfn } & Reward function \\
+  %
+  $\tfn$ & \texttt{ \textbackslash tfn } & Transition function \\
+  %
+\end{tabular}
 
 \end{document}
