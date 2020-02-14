@@ -1,4 +1,4 @@
-# abaisero.sty
+# abaisero-latex
 
 This repository contains the `abaisero.sty` latex style package, which contains
 a bunch of commands and definitions I use very frequently.
