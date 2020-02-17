@@ -1,167 +1,200 @@
 \documentclass{article}
 
 \usepackage[all]{abaisero}
+\usepackage{booktabs}
 
 \begin{document}
 
 \title{abaisero.sty}
 \author{Andrea Baisero}
 
+\newcommand\command[1]{\texttt{\textbackslash{#1}}}
+
 \maketitle
 
-\section*{Option [math]}
+\section{Commands}
+
+\subsection*{Option [math]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\naturalset$ & \texttt{ \textbackslash naturalset } & the set of natural numbers \\
+  $\naturalset$ & \command{naturalset} & the set of natural numbers \\
   %
-  $\realset$ & \texttt{ \textbackslash realset } & the set of real numbers \\
+  $\realset$ & \command{realset} & the set of real numbers \\
   %
-  $\sign$ & \texttt{ \textbackslash sign } & \\
+  $\sign$ & \command{sign} & \\
   %
-  $\softmax$ & \texttt{ \textbackslash softmax } & \\
+  $\softmax$ & \command{softmax} & \\
   %
-  $\softmin$ & \texttt{ \textbackslash softmin } & \\
+  $\softmin$ & \command{softmin} & \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [linalg]}
+\subsection*{Option [linalg]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\diag$ & \texttt{ \textbackslash diag } & \\
+  $\diag$ & \command{diag} & \\
   %
-  $\rank$ & \texttt{ \textbackslash rank } & \\
+  $\rank$ & \command{rank} & \\
   %
-  $\trace$ & \texttt{ \textbackslash trace } & \\
+  $\trace$ & \command{trace} & \\
   %
-  $\colspace$ & \texttt{ \textbackslash colspace } & \\
+  $\colspace$ & \command{colspace} & \\
   %
-  $\spanspace$ & \texttt{ \textbackslash spanspace } & \\
+  $\spanspace$ & \command{spanspace} & \\
   %
-  $\T$ & \texttt{ \textbackslash T } & Transpose superscript \\
+  $\T$ & \command{T} & Transpose superscript \\
   %
-  $\I$ & \texttt{ \textbackslash I } & Inverse superscript \\
+  $\I$ & \command{I} & Inverse superscript \\
   %
-  $\PI$ & \texttt{ \textbackslash PI } & Pseudo-inverse superscript \\
+  $\PI$ & \command{PI} & Pseudo-inverse superscript \\
   %
-  $\IT$ & \texttt{ \textbackslash IT } & Inverse transpose superscript \\
+  $\IT$ & \command{IT} & Inverse transpose superscript \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [optim]}
+\subsection*{Option [optim]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\argmax$ & \texttt{ \textbackslash argmax } & \\
+  $\argmax$ & \command{argmax} & \\
   %
-  $\argmin$ & \texttt{ \textbackslash argmin } & \\
+  $\argmin$ & \command{argmin} & \\
   %
-  $\opt$ & \texttt{ \textbackslash opt } & Optimality superscript \\
+  $\opt$ & \command{opt} & Optimality superscript \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [stats]}
+\subsection*{Option [stats]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\Cov$ & \texttt{ \textbackslash Cov } & Covariance \\
+  $\Cov$ & \command{Cov} & Covariance \\
   %
-  $\Ent$ & \texttt{ \textbackslash Ent } & Entropy \\
+  $\Ent$ & \command{Ent} & Entropy \\
   %
-  $\Exp$ & \texttt{ \textbackslash Exp } & Expectation \\
+  $\Exp$ & \command{Exp} & Expectation \\
   %
-  $\Ind$ & \texttt{ \textbackslash Ind } & indicator function \\
+  $\Ind$ & \command{Ind} & indicator function \\
   %
-  $\KL$ & \texttt{ \textbackslash KL } & KL-divergence \\
+  $\KL$ & \command{KL} & KL-divergence \\
   %
-  $\DKL$ & \texttt{ \textbackslash DKL } & KL-divergence (alternative) \\
+  $\DKL$ & \command{DKL} & KL-divergence (alternative) \\
   %
-  $\MI$ & \texttt{ \textbackslash MI } & Mutual Information \\
+  $\MI$ & \command{MI} & Mutual Information \\
   %
-  $\Var$ & \texttt{\textbackslash Var} & Variance \\
+  $\Var$ & \command{Var} & Variance \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [dists]}
+\subsection*{Option [dists]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\Categorical$ & \texttt{ \textbackslash Categorical } & $\Categorical$ \\
+  $\Categorical$ & \command{Categorical} & $\Categorical$ \\
   %
-  $\Dirichlet$ & \texttt{ \textbackslash Dirichlet } & $\Dirichlet$ \\
+  $\Dirichlet$ & \command{Dirichlet} & $\Dirichlet$ \\
   %
-  $\Normal$ & \texttt{ \textbackslash Normal } & $\Normal$ \\
+  $\Normal$ & \command{Normal} & $\Normal$ \\
   %
-  $\Uniform$ & \texttt{ \textbackslash Uniform } & $\Uniform$ \\
+  $\Uniform$ & \command{Uniform} & $\Uniform$ \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [ml]}
+\subsection*{Option [ml]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\data$ & \texttt{ \textbackslash data } & Data set \\
+  $\data$ & \command{data} & Data set \\
   %
-  $\loss$ & \texttt{ \textbackslash loss } & Loss function \\
+  $\loss$ & \command{loss} & Loss function \\
   %
-  $\nll$ & \texttt{ \textbackslash nll } & Neg-log-likelihood \\
+  $\nll$ & \command{nll} & Neg-log-likelihood \\
   %
-  $\mse$ & \texttt{ \textbackslash mse } & Mean-squared-error \\
+  $\mse$ & \command{mse} & Mean-squared-error \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
-\section*{Option [rl]}
+\subsection*{Option [rl]}
 
 \begin{tabular}{cll}
   %
+  \toprule
+  %
   Symbol & Command & Description \\
   %
-  \hline
+  \midrule
   %
-  $\aset$ & \texttt{ \textbackslash aset } & Action set \\
+  $\aset$ & \command{aset } & Action set \\
   %
-  $\bset$ & \texttt{ \textbackslash bset } & Belief set \\
+  $\bset$ & \command{bset } & Belief set \\
   %
-  $\hset$ & \texttt{ \textbackslash hset } & History set \\
+  $\hset$ & \command{hset } & History set \\
   %
-  $\oset$ & \texttt{ \textbackslash oset } & Observation set \\
+  $\oset$ & \command{oset } & Observation set \\
   %
-  $\rset$ & \texttt{ \textbackslash rset } & Reward set \\
+  $\rset$ & \command{rset } & Reward set \\
   %
-  $\sset$ & \texttt{ \textbackslash sset } & State set \\
+  $\sset$ & \command{sset } & State set \\
   %
-  $\dfn$ & \texttt{ \textbackslash dfn } & Dynamics function \\
+  $\dfn$ & \command{dfn } & Dynamics function \\
   %
-  $\ofn$ & \texttt{ \textbackslash ofn } & Observation function \\
+  $\ofn$ & \command{ofn} & Observation function \\
   %
-  $\rfn$ & \texttt{ \textbackslash rfn } & Reward function \\
+  $\rfn$ & \command{rfn} & Reward function \\
   %
-  $\tfn$ & \texttt{ \textbackslash tfn } & Transition function \\
+  $\tfn$ & \command{tfn} & Transition function \\
+  %
+  \bottomrule
   %
 \end{tabular}
 
