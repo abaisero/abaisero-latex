@@ -104,19 +104,16 @@
 
   \newcommand\nohistory{\varepsilon}
 
-  \newcommand\policy[1][]{{\pi^{#1}{}}}
-  \newcommand\policyq{{\policy[Q]}}
-  \newcommand\policyopt{{\policy[*]}}
+  \newcommand\policy{\pi}
 
-  \newcommand\q[1][]{{Q^{#1}}}
-  \newcommand\qpolicy{{\q[\policy]}}
-  \newcommand\qopt{{\q[*]}}
-  \newcommand\qmodel{{\hat\q}}
+  \newcommand\qpolicy{Q^\policy}
+  \newcommand\qmodel{\hat Q}
 
-  \renewcommand\v[1][]{{V^{#1}}}
-  \newcommand\vpolicy{{\v[\policy]}}
-  \newcommand\vopt{{\v[*]}}
-  \newcommand\vmodel{{\hat\v}}
+  \newcommand\vpolicy{V^\policy}
+  \newcommand\vmodel{\hat V}
+
+  \newcommand\upolicy{U^\policy}
+  \newcommand\umodel{\hat U}
 
 }
 
