@@ -16,27 +16,29 @@
 
 \subsection*{Option [math]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
-  $\naturalset$ & \command{naturalset} & the set of natural numbers \\
+  $\naturalset$ & \command{naturalset} & the set of natural numbers & $\naturalset \doteq \{ 1, 2, 3, \ldots \}$ \\
   %
-  $\realset$ & \command{realset} & the set of real numbers \\
+  $\integerset$ & \command{integerset} & the set of integer numbers & $\integerset \doteq \{ 0, 1, -1, 2, -3, \ldots \}$ \\
   %
-  $\kstar$ & \command{kstar} & the Kleene star operator \\
+  $\realset$ & \command{realset} & the set of real numbers & $\sqrt{2} \in \realset$ \\
   %
-  $\kplus$ & \command{kplus} & the Kleene plus operator \\
+  $\kstar$ & \command{kstar} & the Kleene star operator & $\mathcal{X}\kstar \doteq \bigcup_{k=0}^\infty \mathcal{X}^k$ \\
   %
-  $\sign$ & \command{sign} & \\
+  $\kplus$ & \command{kplus} & the Kleene plus operator & $\mathcal{X}\kplus \doteq \bigcup_{k=1}^\infty \mathcal{X}^k$ \\
   %
-  $\softmax$ & \command{softmax} & \\
+  $\softmax$ & \command{softmax} & & \\
   %
-  $\softmin$ & \command{softmin} & \\
+  $\softmin$ & \command{softmin} & & \\
+  %
+  $\sign$ & \command{sign} & & $x = \sign{x} \cdot |x|$ \\
   %
   \bottomrule
   %
@@ -44,35 +46,35 @@
 
 \subsection*{Option [linalg]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
-  $\diag$ & \command{diag} & \\
+  $\diag$ & \command{diag} & & \\
   %
-  $\rank$ & \command{rank} & \\
+  $\rank$ & \command{rank} & & \\
   %
-  $\trace$ & \command{trace} & \\
+  $\trace$ & \command{trace} & & $\trace(M) \doteq \sum_{i=1}^n M_{ii}$ \\
   %
-  $\colspace$ & \command{colspace} & \\
+  $\colspace$ & \command{colspace} & & \\
   %
-  $\nullspace$ & \command{nullspace} & Nullspace (a.k.a\ kernel) of a linear mapping \\
+  $\nullspace$ & \command{nullspace} & Nullspace (a.k.a\ kernel) of a linear mapping & \\
   %
-  $\spanspace$ & \command{spanspace} & \\
+  $\spanspace$ & \command{spanspace} & & \\
   %
-  $\T$ & \command{T} & Transpose superscript \\
+  $\T$ & \command{T} & Transpose superscript & symmetric $M \implies M = M\T$ \\
   %
-  $\I$ & \command{I} & Inverse superscript \\
+  $\I$ & \command{I} & Inverse superscript & invertible $M \implies MM\I = I$ \\
   %
-  $\PI$ & \command{PI} & Pseudo-inverse superscript \\
+  $\PI$ & \command{PI} & Pseudo-inverse superscript & $MM\PI M = M$ \\
   %
-  $\IT$ & \command{IT} & Inverse transpose superscript \\
+  $\IT$ & \command{IT} & Inverse transpose superscript & $M\IT = (M\I)\T = (M\T)\I$ \\
   %
-  $\PIT$ & \command{PIT} & Pseudo-inverse transpose superscript \\
+  $\PIT$ & \command{PIT} & Pseudo-inverse transpose superscript & $M\PIT = (M\PI)\T = (M\T)\PI$ \\
   %
   \bottomrule
   %
@@ -80,19 +82,19 @@
 
 \subsection*{Option [optim]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
-  $\argmax$ & \command{argmax} & \\
+  $\argmax$ & \command{argmax} & & $\argmax_a \qpolicy(s, a)$ \\
   %
-  $\argmin$ & \command{argmin} & \\
+  $\argmin$ & \command{argmin} & & $\theta\opt \doteq \argmin_\theta \loss(\theta)$ \\
   %
-  $\opt$ & \command{opt} & Optimality superscript \\
+  $\opt$ & \command{opt} & Optimality superscript & $\policy\opt(s) = \argmax_a Q\opt(s, a)$ \\
   %
   \bottomrule
   %
@@ -100,29 +102,29 @@
 
 \subsection*{Option [stats]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
-  $\Cov$ & \command{Cov} & Covariance \\
+  $\Cov$ & \command{Cov} & Covariance & $\Cov(x, y) = \Exp\left[xy\right] - \Exp\left[x\right] \Exp\left[y\right]$ \\
   %
-  $\Ent$ & \command{Ent} & Entropy \\
+  $\Ent$ & \command{Ent} & Entropy & $\Ent[x] = -\Exp\left[\log\Pr(x) \right]$ \\
   %
-  $\Exp$ & \command{Exp} & Expectation \\
+  $\Exp$ & \command{Exp} & Expectation & $\Exp\left[ f(x) \right] = \sum_x \Pr(x) f(x)$ \\
   %
-  $\Ind$ & \command{Ind} & Indicator function \\
+  $\Ind$ & \command{Ind} & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
   %
-  $\KL$ & \command{KL} & KL-divergence \\
+  $\KL$ & \command{KL} & KL-divergence & $\KL\left( p \| q\right) \doteq \Exp_{x\sim p}\left[ \log\left( \frac{p(x)}{q(x)} \right) \right]$ \\
   %
-  $\DKL$ & \command{DKL} & KL-divergence (alternative) \\
+  $\DKL$ & \command{DKL} & KL-divergence (alternative) & \\
   %
-  $\MI$ & \command{MI} & Mutual Information \\
+  $\MI$ & \command{MI} & Mutual Information & \\
   %
-  $\Var$ & \command{Var} & Variance \\
+  $\Var$ & \command{Var} & Variance & $\Var\left[x\right] = \Exp\left[x^2\right] - \Exp\left[x\right]^2$ \\
   %
   \bottomrule
   %
@@ -152,21 +154,21 @@
 
 \subsection*{Option [ml]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
-  $\data$ & \command{data} & Data set \\
+  $\data$ & \command{data} & Data set & $\data \doteq \{ (x_i, y_i) \}_{i=1}^N$ \\
   %
-  $\loss$ & \command{loss} & Loss function \\
+  $\loss$ & \command{loss} & Loss function & $\loss(\theta; x, y) = \frac{1}{2} \| y - f(x; \theta) \|^2$ \\
   %
-  $\nll$ & \command{nll} & Neg-log-likelihood \\
+  $\nll$ & \command{nll} & Neg-log-likelihood & $\nll(x) \doteq -\log\Pr(x)$ \\
   %
-  $\mse$ & \command{mse} & Mean-squared-error \\
+  $\mse$ & \command{mse} & Mean-squared-error & \\
   %
   \bottomrule
   %
