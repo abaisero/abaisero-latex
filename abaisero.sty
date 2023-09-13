@@ -13,6 +13,7 @@
   \ExecuteOptions{dists}
   \ExecuteOptions{ml}
   \ExecuteOptions{rl}
+  \ExecuteOptions{marl}
   \ExecuteOptions{misc}
 
 }
@@ -115,6 +116,18 @@
 
   \newcommand\upolicy{U^\policy}
   \newcommand\umodel{\hat U}
+
+}
+
+\DeclareOption{marl}{%
+
+  \newcommand\hs{{\bar{h}}}
+  \newcommand\as{{\bar{a}}}
+  \newcommand\policies{{\bar{\pi}}}
+
+  \newcommand\qpolicies{Q^\policies}
+  \newcommand\vpolicies{V^\policies}
+  \newcommand\upolicies{U^\policies}
 
 }
 
