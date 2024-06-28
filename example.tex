@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[all]{abaisero}
+\usepackage{abaisero}
 \usepackage{booktabs}
 
 \begin{document}
@@ -8,9 +8,71 @@
 \title{abaisero.sty}
 \author{Andrea Baisero}
 
+\newcommand\option[1]{\texttt{#1}}
 \newcommand\command[1]{\texttt{\textbackslash{#1}}}
 
 \maketitle
+
+\section{Options}
+
+Options are processes left-to-right.
+If no options are provided, or none are enabled by the end of the processing, then by default they are all considered to be enabled.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+  %
+  \toprule
+  %
+  Option & Description \\
+  %
+  \midrule
+  %
+  \option{all} & Enable all commands \\
+  %
+  \option{math} & Enable mathematical commands \\
+  %
+  \option{no-math} & Disable mathematical commands \\
+  %
+  \option{linalg} & Enable linear algebra commands \\
+  %
+  \option{no-linalg} & Disable linear algebra commands \\
+  %
+  \option{optim} & Enable optimization commands \\
+  %
+  \option{no-optim} & Disable optimization commands \\
+  %
+  \option{stats} & Enable statistics commands \\
+  %
+  \option{no-stats} & Disable statistics commands \\
+  %
+  \option{dists} & Enable distributions commands \\
+  %
+  \option{no-dists} & Disable distributions commands \\
+  %
+  \option{ml} & Enable machine learning commands \\
+  %
+  \option{no-ml} & Disable machine learning commands \\
+  %
+  \option{rl} & Enable reinforcement learning commands \\
+  %
+  \option{no-rl} & Disable reinforcement learning commands \\
+  %
+  \option{marl} & Enable multi-agent reinforcement learning commands \\
+  %
+  \option{no-marl} & Disable multi-agent reinforcement learning commands \\
+  %
+  \option{theorem} & Enable theorem commands \\
+  %
+  \option{no-theorem} & Disable theorem commands \\
+  %
+  \option{misc} & Enable miscellanea commands \\
+  %
+  \option{no-misc} & Disable miscellanea commands \\
+  %
+  \bottomrule
+  %
+\end{tabular}
+\end{table}
 
 \section{Commands}
 
@@ -118,7 +180,7 @@
   %
   $\Ind$ & \command{Ind} & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
   %
-  $\KL$ & \command{KL} & KL-divergence & $\KL\left( p \| q\right) \doteq \Exp_{x\sim p}\left[ \log\left( \frac{p(x)}{q(x)} \right) \right]$ \\
+  $\KL$ & \command{KL} & KL-divergence & $\KL\left( p \mid\mid q\right) \doteq \Exp_{x\sim p}\left[ \log p(x) - \log q(x) \right]$ \\
   %
   $\DKL$ & \command{DKL} & KL-divergence (alternative) & \\
   %
@@ -218,27 +280,27 @@
   %
   \midrule
   %
-  $\qpolicy$ & \command{qpolicy} & Policy Q function \\
+  $\qpolicy$ & \command{qpolicy} & Q policy values \\
   %
-  $\qmodel$ & \command{qmodel} & Parametric Q model \\
-  %
-  \midrule
-  %
-  $\vpolicy$ & \command{vpolicy} & Policy V function \\
-  %
-  $\vmodel$ & \command{vmodel} & Parametric V model \\
+  $\qmodel$ & \command{qmodel} & Parametric model \\
   %
   \midrule
   %
-  $\apolicy$ & \command{apolicy} & Policy A function \\
+  $\vpolicy$ & \command{vpolicy} & V policy values \\
   %
-  $\amodel$ & \command{amodel} & Parametric A model \\
+  $\vmodel$ & \command{vmodel} & Parametric model \\
   %
   \midrule
   %
-  $\upolicy$ & \command{upolicy} & Policy U function \\
+  $\apolicy$ & \command{apolicy} & A policy values \\
   %
-  $\umodel$ & \command{umodel} & Parametric U model \\
+  $\amodel$ & \command{amodel} & Parametric model \\
+  %
+  \midrule
+  %
+  $\upolicy$ & \command{upolicy} & U policy values \\
+  %
+  $\umodel$ & \command{umodel} & Parametric model \\
   %
   \bottomrule
   %
@@ -254,21 +316,57 @@
   %
   \midrule
   %
-  $\policies$ & \command{policies } & Joint policies \\
+  $\policies$ & \command{policies} & Joint policy \\
   %
-  $\hs$ & \command{hs } & Joint histories \\
+  $\hs$ & \command{hs} & Joint history \\
   %
-  $\as$ & \command{as } & Joint actions \\
+  $\as$ & \command{as} & Joint action \\
+  %
+  $\os$ & \command{os} & Joint observation \\
   %
   \midrule
   %
-  $\qpolicies$ & \command{qpolicies} & Joint Q function \\
+  $\qpolicies$ & \command{qpolicies} & Q joint-policy values \\
   %
-  $\vpolicies$ & \command{vpolicies} & Joint V function \\
+  $\vpolicies$ & \command{vpolicies} & V joint-policy values \\
   %
-  $\apolicies$ & \command{apolicies} & Joint A function \\
+  $\apolicies$ & \command{apolicies} & A joint-policy values \\
   %
-  $\upolicies$ & \command{upolicies} & Joint U function \\
+  $\upolicies$ & \command{upolicies} & U joint-policy values \\
+  %
+  \bottomrule
+  %
+\end{tabular}
+
+\subsection*{Option [theorem]}
+
+\begin{tabular}{cll}
+  %
+  \toprule
+  %
+  Symbol & Command & Description \\
+  %
+  \midrule
+  %
+  & \command{begin\{definition\}} & \\
+  %
+  & \command{begin\{example\}} & \\
+  %
+  \midrule
+  %
+  & \command{begin\{axiom\}} & \\
+  %
+  & \command{begin\{conjecture\}} & \\
+  %
+  & \command{begin\{proposition\}} & \\
+  %
+  & \command{begin\{lemma\}} & \\
+  %
+  & \command{begin\{theorem\}} & \\
+  %
+  & \command{begin\{corollary\}} & \\
+  %
+  & \command{begin\{generalization\}} & \\
   %
   \bottomrule
   %
@@ -283,6 +381,8 @@
   Symbol & Command & Description \\
   %
   \midrule
+  %
+  $\D$ & \command{D} & Dagger superscript \\
   %
   $\iter{k}$ & \command{iter\{k\}} & Superscript indicating iteration \\
   %
