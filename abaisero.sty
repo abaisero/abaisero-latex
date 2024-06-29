@@ -1,0 +1,234 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{abaisero}[2020/01/01 package abaisero]
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+
+\newif\if@math
+\DeclareOption{math}{\@mathtrue}
+\DeclareOption{no-math}{\@mathfalse}
+
+\newif\if@linalg
+\DeclareOption{math}{\@mathtrue}
+\DeclareOption{no-math}{\@mathfalse}
+
+\newif\if@optim
+\DeclareOption{linalg}{\@linalgtrue}
+\DeclareOption{no-linalg}{\@linalgfalse}
+
+\newif\if@stats
+\DeclareOption{optim}{\@optimtrue}
+\DeclareOption{no-optim}{\@optimfalse}
+
+\newif\if@dists
+\DeclareOption{stats}{\@statstrue}
+\DeclareOption{no-stats}{\@statsfalse}
+
+\newif\if@ml
+\DeclareOption{ml}{\@mltrue}
+\DeclareOption{no-ml}{\@mlfalse}
+
+\newif\if@rl
+\DeclareOption{rl}{\@rltrue}
+\DeclareOption{no-rl}{\@rlfalse}
+
+\newif\if@marl
+\DeclareOption{marl}{\@marltrue}
+\DeclareOption{no-marl}{\@marlfalse}
+
+\newif\if@theorems
+\DeclareOption{theorems}{\@theoremstrue}
+\DeclareOption{no-theorems}{\@theoremsfalse}
+
+\newif\if@misc
+\DeclareOption{misc}{\@misctrue}
+\DeclareOption{no-misc}{\@miscfalse}
+
+\DeclareOption{all}{
+  \@mathtrue
+  \@linalgtrue
+  \@optimtrue
+  \@statstrue
+  \@diststrue
+  \@mltrue
+  \@rltrue
+  \@marltrue
+  \@theoremstrue
+  \@misctrue
+}
+
+\ProcessOptions*\relax
+
+%% Traditional LaTeX or TeX follows...
+% ...
+
+% enable all options if none of them are selected
+
+\newif\if@any
+\if@math\@anytrue\fi
+\if@linalg\@anytrue\fi
+\if@optim\@anytrue\fi
+\if@stats\@anytrue\fi
+\if@dists\@anytrue\fi
+\if@ml\@anytrue\fi
+\if@rl\@anytrue\fi
+\if@marl\@anytrue\fi
+\if@theorems\@anytrue\fi
+\if@misc\@anytrue\fi
+
+\unless\if@any
+  \@mathtrue
+  \@linalgtrue
+  \@optimtrue
+  \@statstrue
+  \@diststrue
+  \@mltrue
+  \@rltrue
+  \@marltrue
+  \@theoremstrue
+  \@misctrue
+\fi
+
+\if@math
+
+  \newcommand\naturalset{\mathbb{N}}
+  \newcommand\integerset{\mathbb{Z}}
+  \newcommand\realset{\mathbb{R}}
+  \newcommand\kstar{^{*}}
+  \newcommand\kplus{^{+}}
+
+  \DeclareMathOperator*\softmax{softmax}
+  \DeclareMathOperator*\softmin{softmin}
+  \DeclareMathOperator*\softargmax{softargmax}
+  \DeclareMathOperator\sign{sign}
+
+\fi
+
+\if@linalg
+
+  \DeclareMathOperator*\diag{diag}
+  \DeclareMathOperator*\rank{rank}
+  \DeclareMathOperator*\trace{tr}
+
+  \DeclareMathOperator*\colspace{col}
+  \DeclareMathOperator*\nullspace{ker}
+  \DeclareMathOperator*\spanspace{span}
+
+  \newcommand\T{^\top}
+  \newcommand\I{^{-1}}
+  \newcommand\PI{^{+}}
+  \newcommand\IT{^{-\top}}
+  \newcommand\PIT{^{+\top}}
+
+\fi
+
+\if@optim
+
+  \newcommand\opt{^{*}}
+  \DeclareMathOperator*\argmax{argmax}
+  \DeclareMathOperator*\argmin{argmin}
+
+\fi
+
+\if@stats
+
+  \DeclareMathOperator\Cov{\mathbb{C}}
+  \DeclareMathOperator\DKL{{D_\text{KL}}}
+  \DeclareMathOperator\Ent{\mathbb{H}}
+  \DeclareMathOperator\Exp{\mathbb{E}}
+  \DeclareMathOperator\Ind{\mathbb{I}}
+  \DeclareMathOperator\KL{KL}
+  \DeclareMathOperator\MI{\mathbb{I}}
+  \DeclareMathOperator\Var{\mathbb{V}}
+
+\fi
+
+\if@dists
+
+  \newcommand\Categorical{\operatorname{Categorical}}
+  \newcommand\Dirichlet{\operatorname{Dirichlet}}
+  \newcommand\Normal{\operatorname{Normal}}
+  \newcommand\Uniform{\operatorname{Uniform}}
+
+\fi
+
+\if@ml
+
+  \newcommand\data{{\mathcal{D}}}
+  \newcommand\loss{\mathcal{L}}
+  \DeclareMathOperator\nll{nll}
+  \DeclareMathOperator\mse{MSE}
+
+\fi
+
+\if@rl
+
+  \newcommand\aset{\mathcal{A}}
+  \newcommand\bset{\mathcal{B}}
+  \newcommand\hset{\mathcal{H}}
+  \newcommand\oset{\mathcal{O}}
+  \newcommand\rset{\mathcal{R}}
+  \newcommand\sset{\mathcal{S}}
+
+  \newcommand\dfn{\mathrm{D}}
+  \newcommand\gfn{\mathrm{G}}
+  \newcommand\ofn{\mathrm{O}}
+  \newcommand\rfn{\mathrm{R}}
+  \newcommand\tfn{\mathrm{T}}
+
+  \newcommand\nohistory{\varepsilon}
+
+  \newcommand\policy{\pi}
+
+  \newcommand\qpolicy{Q^\policy}
+  \newcommand\qmodel{\hat Q}
+
+  \newcommand\vpolicy{V^\policy}
+  \newcommand\vmodel{\hat V}
+
+  \newcommand\apolicy{A^\policy}
+  \newcommand\amodel{\hat A}
+
+  \newcommand\upolicy{U^\policy}
+  \newcommand\umodel{\hat U}
+
+\fi
+
+\if@marl
+
+  \newcommand\hs{{\bar{h}}}
+  \newcommand\as{{\bar{a}}}
+  \newcommand\os{{\bar{o}}}
+  \newcommand\policies{{\bar{\pi}}}
+
+  \newcommand\qpolicies{Q^\policies}
+  \newcommand\vpolicies{V^\policies}
+  \newcommand\apolicies{A^\policies}
+  \newcommand\upolicies{U^\policies}
+
+\fi
+
+\if@theorems
+
+  \newtheorem{definition}{Definition}
+  \newtheorem{example}{Example}
+
+  \newtheorem{axiom}{Axiom}
+  \newtheorem{conjecture}{Conjecture}
+  \newtheorem{proposition}{Proposition}
+  \newtheorem{lemma}{Lemma}
+  \newtheorem{theorem}{Theorem}
+  \newtheorem{corollary}{Corollary}
+  \newtheorem{generalization}{Generalization}
+
+\fi
+
+\if@misc
+
+  \newcommand\D{^{\dag}}
+  \newcommand\iter[1]{^{(#1)}}
+
+\fi
+
+\endinput
