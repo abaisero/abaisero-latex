@@ -2,6 +2,7 @@
 
 \usepackage{abaisero}
 \usepackage{booktabs}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -76,15 +77,19 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\kplus$ & \command{kplus} & the Kleene plus operator & $\mathcal{X}\kplus \doteq \bigcup_{k=1}^\infty \mathcal{X}^k$ \\
   %
-  $\softmax$ & \command{softmax} & & \\
+  $\softmax$ & \command{softmax} & a.k.a. logsumexp, realsoftmax\footnotemark[1] & $\softmax(x_1, \ldots, x_n) \doteq \log\sum_i \exp(x_i)$ \\
   %
-  $\softmin$ & \command{softmin} & & \\
+  $\softmin$ & \command{softmin} & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
+  %
+  $\softargmax$ & \command{softargmax} & a.k.a. softmax\footnotemark[1] & $\softargmax_i(x_1, \ldots, x_n) \doteq \frac{ \exp x_i }{ \sum_i \exp x_i }$ \\
   %
   $\sign$ & \command{sign} & & $x = \sign{x} \cdot |x|$ \\
   %
   \bottomrule
   %
 \end{tabular}
+
+\footnotetext[1]{The functions that in this document are called ``softmax'' and ``softargmax'' are poorly and inaccurately named in the broader math and ML fields (see \url{https://en.wikipedia.org/wiki/Softmax_function} and \url{https://en.wikipedia.org/wiki/LogSumExp}). Rather than stick to the more common naming conventions, I opt to rename the functions more accurately to appropriately reflect their actual properties. In any document where I would use these functions, I would need to define them anyway, so the risk of misunderstandings are minimal.}
 
 \subsection*{Option [linalg]}
 
