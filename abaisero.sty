@@ -10,20 +10,20 @@
 \DeclareOption{no-math}{\@mathfalse}
 
 \newif\if@linalg
-\DeclareOption{math}{\@mathtrue}
-\DeclareOption{no-math}{\@mathfalse}
-
-\newif\if@optim
 \DeclareOption{linalg}{\@linalgtrue}
 \DeclareOption{no-linalg}{\@linalgfalse}
 
-\newif\if@stats
+\newif\if@optim
 \DeclareOption{optim}{\@optimtrue}
 \DeclareOption{no-optim}{\@optimfalse}
 
-\newif\if@dists
+\newif\if@stats
 \DeclareOption{stats}{\@statstrue}
 \DeclareOption{no-stats}{\@statsfalse}
+
+\newif\if@dists
+\DeclareOption{dists}{\@diststrue}
+\DeclareOption{no-dists}{\@distsfalse}
 
 \newif\if@ml
 \DeclareOption{ml}{\@mltrue}
