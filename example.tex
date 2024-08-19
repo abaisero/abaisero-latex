@@ -12,7 +12,6 @@
 \author{Andrea Baisero}
 
 \newcommand\option[1]{\texttt{#1}}
-\newcommand\command[1]{\texttt{\textbackslash{#1}}}
 
 \newcommand\xset{\mathcal{X}}
 \newcommand\yset{\mathcal{Y}}
@@ -72,25 +71,25 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\naturalset$ & \command{naturalset} & the set of natural numbers & $\naturalset \doteq \{ 1, 2, 3, \ldots \}$ \\
+  $\naturalset$ & \verb|\naturalset| & the set of natural numbers & $\naturalset \doteq \{ 1, 2, 3, \ldots \}$ \\
   %
-  $\integerset$ & \command{integerset} & the set of integer numbers & $\integerset \doteq \{ 0, 1, -1, 2, -3, \ldots \}$ \\
+  $\integerset$ & \verb|\integerset| & the set of integer numbers & $\integerset \doteq \{ 0, 1, -1, 2, -3, \ldots \}$ \\
   %
-  $\realset$ & \command{realset} & the set of real numbers & $\sqrt{2} \in \realset$ \\
+  $\realset$ & \verb|\realset| & the set of real numbers & $\sqrt{2} \in \realset$ \\
   %
-  $\kstar$ & \command{kstar} & the Kleene star operator & $\xset\kstar \doteq \bigcup_{k=0}^\infty \xset^k$ \\
+  $\kstar$ & \verb|\kstar| & the Kleene star operator & $\xset\kstar \doteq \bigcup_{k=0}^\infty \xset^k$ \\
   %
-  $\kplus$ & \command{kplus} & the Kleene plus operator & $\xset\kplus \doteq \bigcup_{k=1}^\infty \xset^k$ \\
+  $\kplus$ & \verb|\kplus| & the Kleene plus operator & $\xset\kplus \doteq \bigcup_{k=1}^\infty \xset^k$ \\
   %
-  $\softmax$ & \command{softmax} & a.k.a. logsumexp, realsoftmax\footnotemark[1] & $\softmax(x_1, \ldots, x_n) \doteq \log\sum_i \exp(x_i)$ \\
+  $\softmax$ & \verb|\softmax| & a.k.a. logsumexp, realsoftmax\footnotemark[1] & $\softmax(x_1, \ldots, x_n) \doteq \log\sum_i \exp(x_i)$ \\
   %
-  $\softmin$ & \command{softmin} & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
+  $\softmin$ & \verb|\softmin| & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
   %
-  $\softargmax$ & \command{softargmax} & a.k.a. softmax\footnotemark[1] & $\softargmax(x_1, \ldots, x_n)_i \doteq \frac{ \exp(x_i) }{ \sum_k \exp(x_k) } $ \\
+  $\softargmax$ & \verb|\softargmax| & a.k.a. softmax\footnotemark[1] & $\softargmax(x_1, \ldots, x_n)_i \doteq \frac{ \exp(x_i) }{ \sum_k \exp(x_k) } $ \\
   %
-  $\sign$ & \command{sign} & & $x = \sign{x} \cdot |x|$ \\
+  $\sign$ & \verb|\sign| & & $x = \sign{x} \cdot |x|$ \\
   %
-  $\supp$ & \command{supp} & support operator & $\supp(f) \doteq \{ x \mid f(x) \neq 0 \}$ \\
+  $\supp$ & \verb|\supp| & support operator & $\supp(f) \doteq \{ x \mid f(x) \neq 0 \}$ \\
   %
   \bottomrule
   %
@@ -108,27 +107,27 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\diag$ & \command{diag} & & \\
+  $\diag$ & \verb|\diag| & & \\
   %
-  $\rank$ & \command{rank} & & \\
+  $\rank$ & \verb|\rank| & & \\
   %
-  $\trace$ & \command{trace} & & $\trace(M) \doteq \sum_{i=1}^n M_{ii}$ \\
+  $\trace$ & \verb|\trace| & & $\trace(M) \doteq \sum_{i=1}^n M_{ii}$ \\
   %
-  $\colspace$ & \command{colspace} & & \\
+  $\colspace$ & \verb|\colspace| & & \\
   %
-  $\nullspace$ & \command{nullspace} & Nullspace (a.k.a\ kernel) of a linear mapping & \\
+  $\nullspace$ & \verb|\nullspace| & Nullspace (a.k.a\ kernel) of a linear mapping & \\
   %
-  $\spanspace$ & \command{spanspace} & & \\
+  $\spanspace$ & \verb|\spanspace| & & \\
   %
-  $\T$ & \command{T} & Transpose superscript & symmetric $M \implies M = M\T$ \\
+  $\T$ & \verb|\T| & Transpose superscript & symmetric $M \implies M = M\T$ \\
   %
-  $\I$ & \command{I} & Inverse superscript & invertible $M \implies MM\I = I$ \\
+  $\I$ & \verb|\I| & Inverse superscript & invertible $M \implies MM\I = I$ \\
   %
-  $\PI$ & \command{PI} & Pseudo-inverse superscript & $MM\PI M = M$ \\
+  $\PI$ & \verb|\PI| & Pseudo-inverse superscript & $MM\PI M = M$ \\
   %
-  $\IT$ & \command{IT} & Inverse transpose superscript & $M\IT = (M\I)\T = (M\T)\I$ \\
+  $\IT$ & \verb|\IT| & Inverse transpose superscript & $M\IT = (M\I)\T = (M\T)\I$ \\
   %
-  $\PIT$ & \command{PIT} & Pseudo-inverse transpose superscript & $M\PIT = (M\PI)\T = (M\T)\PI$ \\
+  $\PIT$ & \verb|\PIT| & Pseudo-inverse transpose superscript & $M\PIT = (M\PI)\T = (M\T)\PI$ \\
   %
   \bottomrule
   %
@@ -144,11 +143,11 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\argmax$ & \command{argmax} & & $\argmax_a \qpolicy(s, a)$ \\
+  $\argmax$ & \verb|\argmax| & & $\argmax_a \qpolicy(s, a)$ \\
   %
-  $\argmin$ & \command{argmin} & & $\theta\opt \doteq \argmin_\theta \loss(\theta)$ \\
+  $\argmin$ & \verb|\argmin| & & $\theta\opt \doteq \argmin_\theta \loss(\theta)$ \\
   %
-  $\opt$ & \command{opt} & Optimality superscript & $\policy\opt(s) = \argmax_a Q\opt(s, a)$ \\
+  $\opt$ & \verb|\opt| & Optimality superscript & $\policy\opt(s) = \argmax_a Q\opt(s, a)$ \\
   %
   \bottomrule
   %
@@ -164,31 +163,31 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\indep$ & \command{indep} & Independence & $X \indep Y \mid Z$ \\
+  $\indep$ & \verb|\indep| & Independence & $X \indep Y \mid Z$ \\
   %
   \midrule
   %
-  $\causaldo$ & \command{causaldo} & Pearl's \emph{do} operator & $\Pr(Y\mid \causaldo(X=x)) \neq \Pr(Y\mid X=s)$ \\
+  $\causaldo$ & \verb|\causaldo| & Pearl's \emph{do} operator & $\Pr(Y\mid \causaldo(X=x)) \neq \Pr(Y\mid X=s)$ \\
   %
   \midrule
   %
-  $\Cov$ & \command{Cov} & Covariance & $\Cov(x, y) = \Exp\left[xy\right] - \Exp\left[x\right] \Exp\left[y\right]$ \\
+  $\Cov$ & \verb|\Cov| & Covariance & $\Cov(x, y) = \Exp\left[xy\right] - \Exp\left[x\right] \Exp\left[y\right]$ \\
   %
-  $\Ent$ & \command{Ent} & Entropy & $\Ent[x] = -\Exp\left[\log\Pr(x) \right]$ \\
+  $\Ent$ & \verb|\Ent| & Entropy & $\Ent[x] = -\Exp\left[\log\Pr(x) \right]$ \\
   %
-  $\Exp$ & \command{Exp} & Expectation & $\Exp\left[ f(x) \right] = \sum_x \Pr(x) f(x)$ \\
+  $\Exp$ & \verb|\Exp| & Expectation & $\Exp\left[ f(x) \right] = \sum_x \Pr(x) f(x)$ \\
   %
-  $\Ind$ & \command{Ind} & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
+  $\Ind$ & \verb|\Ind| & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
   %
-  $\KL$ & \command{KL} & KL-divergence & $\KL\left( p \mid\mid q\right) \doteq \Exp_{x\sim p}\left[ \log p(x) - \log q(x) \right]$ \\
+  $\KL$ & \verb|\KL| & KL-divergence & $\KL\left( p \mid\mid q\right) \doteq \Exp_{x\sim p}\left[ \log p(x) - \log q(x) \right]$ \\
   %
-  $\DKL$ & \command{DKL} & KL-divergence (alternative) & \\
+  $\DKL$ & \verb|\DKL| & KL-divergence (alternative) & \\
   %
-  $\MI$ & \command{MI} & Mutual Information & \\
+  $\MI$ & \verb|\MI| & Mutual Information & \\
   %
-  $\Bias$ & \command{Bias} & Bias & $\Bias\left[\hat f(x)\right]$ is the bias of estimator $\hat f$ \\
+  $\Bias$ & \verb|\Bias| & Bias & $\Bias\left[\hat f(x)\right]$ is the bias of estimator $\hat f$ \\
   %
-  $\Var$ & \command{Var} & Variance & $\Var\left[\hat f(x)\right] = \Exp\left[\hat f(x)^2\right] - \Exp\left[ \hat f(x)\right]^2$ \\
+  $\Var$ & \verb|\Var| & Variance & $\Var\left[\hat f(x)\right] = \Exp\left[\hat f(x)^2\right] - \Exp\left[ \hat f(x)\right]^2$ \\
   %
   \bottomrule
   %
@@ -204,15 +203,15 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\Categorical$ & \command{Categorical} & $\Categorical$ \\
+  $\Categorical$ & \verb|\Categorical| & $\Categorical$ \\
   %
-  $\Dirichlet$ & \command{Dirichlet} & $\Dirichlet$ \\
+  $\Dirichlet$ & \verb|\Dirichlet| & $\Dirichlet$ \\
   %
-  $\Geometric$ & \command{Geometric} & $\Geometric$ \\
+  $\Geometric$ & \verb|\Geometric| & $\Geometric$ \\
   %
-  $\Normal$ & \command{Normal} & $\Normal$ \\
+  $\Normal$ & \verb|\Normal| & $\Normal$ \\
   %
-  $\Uniform$ & \command{Uniform} & $\Uniform$ \\
+  $\Uniform$ & \verb|\Uniform| & $\Uniform$ \\
   %
   \bottomrule
   %
@@ -228,13 +227,13 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\data$ & \command{data} & Data set & $\data \doteq \{ (x_i, y_i) \}_{i=1}^N$ \\
+  $\data$ & \verb|\data| & Data set & $\data \doteq \{ (x_i, y_i) \}_{i=1}^N$ \\
   %
-  $\loss$ & \command{loss} & Loss function & $\loss(\theta; x, y) = \frac{1}{2} \| y - f(x; \theta) \|^2$ \\
+  $\loss$ & \verb|\loss| & Loss function & $\loss(\theta; x, y) = \frac{1}{2} \| y - f(x; \theta) \|^2$ \\
   %
-  $\nll$ & \command{nll} & Neg-log-likelihood & $\nll(x) \doteq -\log\Pr(x)$ \\
+  $\nll$ & \verb|\nll| & Neg-log-likelihood & $\nll(x) \doteq -\log\Pr(x)$ \\
   %
-  $\mse$ & \command{mse} & Mean-squared-error & \\
+  $\mse$ & \verb|\mse| & Mean-squared-error & \\
   %
   \bottomrule
   %
@@ -250,61 +249,61 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\aset$ & \command{aset } & Action set \\
+  $\aset$ & \verb|\aset| & Action set \\
   %
-  $\bset$ & \command{bset } & Belief set \\
+  $\bset$ & \verb|\bset| & Belief set \\
   %
-  $\hset$ & \command{hset } & History set \\
+  $\hset$ & \verb|\hset| & History set \\
   %
-  $\oset$ & \command{oset } & Observation set \\
+  $\oset$ & \verb|\oset| & Observation set \\
   %
-  $\rset$ & \command{rset } & Reward set \\
+  $\rset$ & \verb|\rset| & Reward set \\
   %
-  $\sset$ & \command{sset } & State set \\
-  %
-  \midrule
-  %
-  $\dfn$ & \command{dfn } & Dynamics function \\
-  %
-  $\gfn$ & \command{gfn } & Generative function \\
-  %
-  $\ofn$ & \command{ofn} & Observation function \\
-  %
-  $\rfn$ & \command{rfn} & Reward function \\
-  %
-  $\tfn$ & \command{tfn} & Transition function \\
+  $\sset$ & \verb|\sset| & State set \\
   %
   \midrule
   %
-  $\nohistory$ & \command{nohistory} & Empty history \\
+  $\dfn$ & \verb|\dfn| & Dynamics function \\
+  %
+  $\gfn$ & \verb|\gfn| & Generative function \\
+  %
+  $\ofn$ & \verb|\ofn| & Observation function \\
+  %
+  $\rfn$ & \verb|\rfn| & Reward function \\
+  %
+  $\tfn$ & \verb|\tfn| & Transition function \\
   %
   \midrule
   %
-  $\policy$ & \command{policy} & policy \\
+  $\nohistory$ & \verb|\nohistory| & Empty history \\
   %
   \midrule
   %
-  $\qpolicy$ & \command{qpolicy} & Q policy values \\
-  %
-  $\qmodel$ & \command{qmodel} & Parametric model \\
+  $\policy$ & \verb|\policy| & policy \\
   %
   \midrule
   %
-  $\vpolicy$ & \command{vpolicy} & V policy values \\
+  $\qpolicy$ & \verb|\qpolicy| & Q policy values \\
   %
-  $\vmodel$ & \command{vmodel} & Parametric model \\
-  %
-  \midrule
-  %
-  $\apolicy$ & \command{apolicy} & A policy values \\
-  %
-  $\amodel$ & \command{amodel} & Parametric model \\
+  $\qmodel$ & \verb|\qmodel| & Parametric model \\
   %
   \midrule
   %
-  $\upolicy$ & \command{upolicy} & U policy values \\
+  $\vpolicy$ & \verb|\vpolicy| & V policy values \\
   %
-  $\umodel$ & \command{umodel} & Parametric model \\
+  $\vmodel$ & \verb|\vmodel| & Parametric model \\
+  %
+  \midrule
+  %
+  $\apolicy$ & \verb|\apolicy| & A policy values \\
+  %
+  $\amodel$ & \verb|\amodel| & Parametric model \\
+  %
+  \midrule
+  %
+  $\upolicy$ & \verb|\upolicy| & U policy values \\
+  %
+  $\umodel$ & \verb|\umodel| & Parametric model \\
   %
   \bottomrule
   %
@@ -320,33 +319,33 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\hsset$ & \command{hsset} & Joint history set \\
+  $\hsset$ & \verb|\hsset| & Joint history set \\
   %
-  $\asset$ & \command{asset} & Joint action set \\
+  $\asset$ & \verb|\asset| & Joint action set \\
   %
-  $\osset$ & \command{osset} & Joint observation set \\
-  %
-  \midrule
-  %
-  $\hs$ & \command{hs} & Joint history \\
-  %
-  $\as$ & \command{as} & Joint action \\
-  %
-  $\os$ & \command{os} & Joint observation \\
+  $\osset$ & \verb|\osset| & Joint observation set \\
   %
   \midrule
   %
-  $\policies$ & \command{policies} & Joint policy \\
+  $\hs$ & \verb|\hs| & Joint history \\
+  %
+  $\as$ & \verb|\as| & Joint action \\
+  %
+  $\os$ & \verb|\os| & Joint observation \\
   %
   \midrule
   %
-  $\qpolicies$ & \command{qpolicies} & Q joint-policy values \\
+  $\policies$ & \verb|\policies| & Joint policy \\
   %
-  $\vpolicies$ & \command{vpolicies} & V joint-policy values \\
+  \midrule
   %
-  $\apolicies$ & \command{apolicies} & A joint-policy values \\
+  $\qpolicies$ & \verb|\qpolicies| & Q joint-policy values \\
   %
-  $\upolicies$ & \command{upolicies} & U joint-policy values \\
+  $\vpolicies$ & \verb|\vpolicies| & V joint-policy values \\
+  %
+  $\apolicies$ & \verb|\apolicies| & A joint-policy values \\
+  %
+  $\upolicies$ & \verb|\upolicies| & U joint-policy values \\
   %
   \bottomrule
   %
@@ -362,25 +361,25 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  & \command{begin\{definition\}} & \\
+  & \verb|\begin{definition}| \verb|\end{definition}| & \\
   %
-  & \command{begin\{example\}} & \\
+  & \verb|\begin{example}| \verb|\end{example}| & \\
   %
   \midrule
   %
-  & \command{begin\{axiom\}} & \\
+  & \verb|\begin{axiom}| \verb|\end{axiom}| & \\
   %
-  & \command{begin\{conjecture\}} & \\
+  & \verb|\begin{conjecture}| \verb|\end{conjecture}| & \\
   %
-  & \command{begin\{proposition\}} & \\
+  & \verb|\begin{proposition}| \verb|\end{proposition}| & \\
   %
-  & \command{begin\{lemma\}} & \\
+  & \verb|\begin{lemma}| \verb|\end{lemma}| & \\
   %
-  & \command{begin\{theorem\}} & \\
+  & \verb|\begin{theorem}| \verb|\end{theorem}| & \\
   %
-  & \command{begin\{corollary\}} & \\
+  & \verb|\begin{corollary}| \verb|\end{corollary}| & \\
   %
-  & \command{begin\{generalization\}} & \\
+  & \verb|\begin{generalization}| \verb|\end{generalization}| & \\
   %
   \bottomrule
   %
@@ -396,9 +395,9 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\D$ & \command{D} & Dagger superscript \\
+  $\D$ & \verb|\D| & Dagger superscript \\
   %
-  $\iter{k}$ & \command{iter\{k\}} & Superscript indicating iteration \\
+  $\iter{k}$ & \verb|\iter{k}| & Superscript indicating iteration \\
   %
   \bottomrule
   %
