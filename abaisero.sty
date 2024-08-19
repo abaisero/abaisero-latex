@@ -188,16 +188,16 @@
 
   \newcommand\policy{\pi}
 
-  \newcommand\qpolicy{Q^\policy}
+  \newcommand\qpolicy[1][\policy]{Q^{#1}}
   \newcommand\qmodel{\hat Q}
 
-  \newcommand\vpolicy{V^\policy}
+  \newcommand\vpolicy[1][\policy]{V^{#1}}
   \newcommand\vmodel{\hat V}
 
-  \newcommand\apolicy{A^\policy}
+  \newcommand\apolicy[1][\policy]{A^{#1}}
   \newcommand\amodel{\hat A}
 
-  \newcommand\upolicy{U^\policy}
+  \newcommand\upolicy[1][\policy]{U^{#1}}
   \newcommand\umodel{\hat U}
 
 \fi
@@ -211,12 +211,12 @@
   \newcommand\hs{{\bar{h}}}
   \newcommand\as{{\bar{a}}}
   \newcommand\os{{\bar{o}}}
-  \newcommand\policies{{\bar{\pi}}}
+  \newcommand\policies{{\bar{\policy}}}
 
-  \newcommand\qpolicies{Q^\policies}
-  \newcommand\vpolicies{V^\policies}
-  \newcommand\apolicies{A^\policies}
-  \newcommand\upolicies{U^\policies}
+  \newcommand\qpolicies{\qpolicy[\policies]}
+  \newcommand\vpolicies{\vpolicy[\policies]}
+  \newcommand\apolicies{\apolicy[\policies]}
+  \newcommand\upolicies{\upolicy[\policies]}
 
 \fi
 
