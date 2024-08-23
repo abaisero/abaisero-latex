@@ -215,19 +215,21 @@
 
 \if@marl
 
-  \newcommand\asset{\bar{\mathcal{A}}}
-  \newcommand\hsset{\bar{\mathcal{H}}}
-  \newcommand\osset{\bar{\mathcal{O}}}
+  \newcommand\joint[1]{\bar{#1}}
 
-  \newcommand\hs{{\bar{h}}}
-  \newcommand\as{{\bar{a}}}
-  \newcommand\os{{\bar{o}}}
-  \newcommand\policies{{\bar{\policy}}}
+  \newcommand\jaset{{\joint{\aset}}}
+  \newcommand\jhset{{\joint{\hset}}}
+  \newcommand\joset{{\joint{\oset}}}
 
-  \newcommand\qpolicies{\qpolicy[\policies]}
-  \newcommand\vpolicies{\vpolicy[\policies]}
-  \newcommand\apolicies{\apolicy[\policies]}
-  \newcommand\upolicies{\upolicy[\policies]}
+  \newcommand\jh{{\joint{h}}}
+  \newcommand\ja{{\joint{a}}}
+  \newcommand\jo{{\joint{o}}}
+  \newcommand\jpolicy{{\joint{\policy}}}
+
+  \newcommand\jqpolicy{\qpolicy[\jpolicy]}
+  \newcommand\jvpolicy{\vpolicy[\jpolicy]}
+  \newcommand\japolicy{\apolicy[\jpolicy]}
+  \newcommand\jupolicy{\upolicy[\jpolicy]}
 
 \fi
 
