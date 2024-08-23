@@ -45,6 +45,10 @@
 \DeclareOption{misc}{\@misctrue}
 \DeclareOption{no-misc}{\@miscfalse}
 
+\newif\if@utils
+\DeclareOption{utils}{\@utilstrue}
+\DeclareOption{no-utils}{\@utilsfalse}
+
 \DeclareOption{all}{
   \@mathtrue
   \@linalgtrue
@@ -56,6 +60,7 @@
   \@marltrue
   \@theoremstrue
   \@misctrue
+  \@utilstrue
 }
 
 \ProcessOptions*\relax
@@ -76,6 +81,7 @@
 \if@marl\@anytrue\fi
 \if@theorems\@anytrue\fi
 \if@misc\@anytrue\fi
+\if@utils\@anytrue\fi
 
 \unless\if@any
   \@mathtrue
@@ -88,6 +94,7 @@
   \@marltrue
   \@theoremstrue
   \@misctrue
+  \@utilstrue
 \fi
 
 \if@math
@@ -240,6 +247,12 @@
 
   \newcommand\D{^{\dag}}
   \newcommand\iter[1]{^{(#1)}}
+
+\fi
+
+\if@utils
+
+  \newcommand\phantomeq{\hphantom{{}={}}}
 
 \fi
 
