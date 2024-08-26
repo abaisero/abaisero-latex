@@ -199,11 +199,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [dists]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
@@ -245,11 +245,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [rl]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
@@ -323,11 +323,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [marl]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
@@ -335,23 +335,23 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
-  $\jhset$ & \verb|\jhset| & Joint history set \\
-  %
   $\jaset$ & \verb|\jaset| & Joint action set \\
   %
   $\joset$ & \verb|\joset| & Joint observation set \\
   %
-  \midrule
-  %
-  $\jh$ & \verb|\jh| & Joint history \\
-  %
-  $\ja$ & \verb|\ja| & Joint action \\
-  %
-  $\jo$ & \verb|\jo| & Joint observation \\
+  $\jhset$ & \verb|\jhset| & Joint history set \\
   %
   \midrule
   %
-  $\jpolicy$ & \verb|\jpolicy| & Joint policy \\
+  $\ja$ & \verb|\ja| & Joint action & $\ja\in\jaset$ \\
+  %
+  $\jo$ & \verb|\jo| & Joint observation & $\jo\in\joset$ \\
+  %
+  $\jh$ & \verb|\jh| & Joint history & $\jh\in\jhset$ \\
+  %
+  \midrule
+  %
+  $\jpolicy$ & \verb|\jpolicy| & Joint policy & $\jpolicy(\jh, \ja) \doteq \prod_i \policy_i(h_i, a_i)$ \\
   %
   \midrule
   %
@@ -369,11 +369,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [theorem]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
@@ -405,11 +405,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [misc]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
@@ -423,11 +423,11 @@ If no options are provided, or none are enabled by the end of the processing, th
 
 \subsection*{Option [utils]}
 
-\begin{tabular}{cll}
+\begin{tabular}{clll}
   %
   \toprule
   %
-  Symbol & Command & Description \\
+  Symbol & Command & Description & Example \\
   %
   \midrule
   %
