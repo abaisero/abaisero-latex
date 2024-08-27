@@ -81,6 +81,12 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\kplus$ & \verb|\kplus| & the Kleene plus operator & $\xset\kplus \doteq \bigcup_{k=1}^\infty \xset^k$ \\
   %
+  \midrule
+  %
+  $\powerset$ & \verb|\powerset| & power set & $\powerset(\xset) \doteq \left\{ \hat\xset \mid \hat\xset \subseteq \xset \right\}$ \\
+  %
+  \midrule
+  %
   $\softmax$ & \verb|\softmax| & a.k.a. logsumexp, realsoftmax\footnotemark[1] & $\softmax(x_1, \ldots, x_n) \doteq \log\sum_i \exp(x_i)$ \\
   %
   $\softmin$ & \verb|\softmin| & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
