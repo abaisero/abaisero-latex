@@ -5,6 +5,9 @@
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
 
+\RequirePackage{mathtools}
+\RequirePackage[only,llbracket,rrbracket]{stmaryrd}
+
 \newif\if@math
 \DeclareOption{math}{\@mathtrue}
 \DeclareOption{no-math}{\@mathfalse}
@@ -107,6 +110,9 @@
 
   \newcommand\powerset{\mathcal{P}}
 
+  \DeclareMathOperator\Ind{\mathbb{I}}
+  \DeclarePairedDelimiter\iverson{\llbracket}{\rrbracket}
+
   \DeclareMathOperator*\softmax{softmax}
   \DeclareMathOperator*\softmin{softmin}
   \DeclareMathOperator*\softargmax{softargmax}
@@ -153,7 +159,6 @@
   \DeclareMathOperator\DKL{{D_\text{KL}}}
   \DeclareMathOperator\Ent{\mathbb{H}}
   \DeclareMathOperator\Exp{\mathbb{E}}
-  \DeclareMathOperator\Ind{\mathbb{I}}
   \DeclareMathOperator\KL{KL}
   \DeclareMathOperator\MI{\mathbb{I}}
   \DeclareMathOperator\Bias{\mathbb{B}}

@@ -16,6 +16,8 @@
 \newcommand\xset{\mathcal{X}}
 \newcommand\yset{\mathcal{Y}}
 
+\interfootnotelinepenalty=10000
+
 \maketitle
 
 \section{Options}
@@ -84,6 +86,14 @@ If no options are provided, or none are enabled by the end of the processing, th
   \midrule
   %
   $\powerset$ & \verb|\powerset| & power set & $\powerset(\xset) \doteq \left\{ \hat\xset \mid \hat\xset \subseteq \xset \right\}$ \\
+  %
+  \midrule
+  %
+  $\Ind$ & \verb|\Ind| & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
+  %
+  \midrule
+  %
+  $\iverson{\cdot}$ & \verb|\iverson{\cdot}| & Iverson brackets & $\iverson{ x \geq 0 }$ maps $x$ to binaries \\
   %
   \midrule
   %
@@ -186,8 +196,6 @@ If no options are provided, or none are enabled by the end of the processing, th
   $\Ent$ & \verb|\Ent| & Entropy & $\Ent[x] = -\Exp\left[\log\Pr(x) \right]$ \\
   %
   $\Exp$ & \verb|\Exp| & Expectation & $\Exp\left[ f(x) \right] = \sum_x \Pr(x) f(x)$ \\
-  %
-  $\Ind$ & \verb|\Ind| & Indicator function & $\Pr(x=0) = \Exp\left[ \Ind\left[ x=0 \right] \right]$ \\
   %
   $\KL$ & \verb|\KL| & KL-divergence & $\KL\left( p \mid\mid q\right) \doteq \Exp_{x\sim p}\left[ \log p(x) - \log q(x) \right]$ \\
   %
