@@ -4,6 +4,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
+\RequirePackage{bm}
 
 \RequirePackage{mathtools}
 \RequirePackage[only,llbracket,rrbracket]{stmaryrd}
@@ -219,7 +220,8 @@
 
 \if@marl
 
-  \newcommand\joint[1]{\bar{#1}}
+  % \newcommand\joint[1]{\bar{#1}}
+  \newcommand\joint[1]{\bm{#1}}
 
   \newcommand\jaset{{\joint{\aset}}}
   \newcommand\jhset{{\joint{\hset}}}
