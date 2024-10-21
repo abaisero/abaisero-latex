@@ -97,15 +97,17 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   \midrule
   %
+  $\sign$ & \verb|\sign| & & $x = \sign{x} \cdot |x|$ \\
+  %
+  $\supp$ & \verb|\supp| & support operator & $\supp(f) \doteq \{ x \mid f(x) \neq 0 \}$ \\
+  %
+  \midrule
+  %
   $\softmax$ & \verb|\softmax| & a.k.a. logsumexp, realsoftmax\footnotemark[1] & $\softmax(x_1, \ldots, x_n) \doteq \log\sum_i \exp(x_i)$ \\
   %
   $\softmin$ & \verb|\softmin| & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
   %
   $\softargmax$ & \verb|\softargmax| & a.k.a. softmax\footnotemark[1] & $\softargmax(x_1, \ldots, x_n)_i \doteq \frac{ \exp(x_i) }{ \sum_k \exp(x_k) } $ \\
-  %
-  $\sign$ & \verb|\sign| & & $x = \sign{x} \cdot |x|$ \\
-  %
-  $\supp$ & \verb|\supp| & support operator & $\supp(f) \doteq \{ x \mid f(x) \neq 0 \}$ \\
   %
   \bottomrule
   %
