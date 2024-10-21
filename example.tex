@@ -295,7 +295,7 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\qpolicy$ & \verb|\qpolicy| & Q policy values \\
   %
-  $\qpolicy[\mu]$ & \verb|\qpolicy[\mu]| & Q policy values w/ optional argument \\
+  $\qpolicy[\mu]$ & \verb|\qpolicy[\mu]| & Q policy values \\
   %
   $\qmodel$ & \verb|\qmodel| & Parametric model \\
   %
@@ -303,7 +303,7 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\vpolicy$ & \verb|\vpolicy| & V policy values \\
   %
-  $\vpolicy[\mu]$ & \verb|\vpolicy[\mu]| & V policy values w/ optional argument \\
+  $\vpolicy[\mu]$ & \verb|\vpolicy[\mu]| & V policy values \\
   %
   $\vmodel$ & \verb|\vmodel| & Parametric model \\
   %
@@ -311,7 +311,7 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\apolicy$ & \verb|\apolicy| & A policy values \\
   %
-  $\apolicy[\mu]$ & \verb|\apolicy[\mu]| & A policy values w/ optional argument \\
+  $\apolicy[\mu]$ & \verb|\apolicy[\mu]| & A policy values \\
   %
   $\amodel$ & \verb|\amodel| & Parametric model \\
   %
@@ -319,7 +319,7 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\upolicy$ & \verb|\upolicy| & U policy values \\
   %
-  $\upolicy[\mu]$ & \verb|\upolicy[\mu]| & U policy values w/ optional argument \\
+  $\upolicy[\mu]$ & \verb|\upolicy[\mu]| & U policy values \\
   %
   $\umodel$ & \verb|\umodel| & Parametric model \\
   %
@@ -327,7 +327,7 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\bpolicy$ & \verb|\bpolicy| & Policy Bellman operator \\
   %
-  $\bpolicy[\mu]$ & \verb|\bpolicy[\mu]| & Policy Bellman operator w/ optional argument \\
+  $\bpolicy[\mu]$ & \verb|\bpolicy[\mu]| & Policy Bellman operator \\
   %
   \bottomrule
   %
@@ -381,21 +381,63 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\jbpolicy$ & \verb|\jbpolicy| & Joint policy Bellman operator \\
   %
-  $\jbpolicy[\joint\mu]$ & \verb|\jbpolicy[\joint\mu]| & Joint policy Bellman operator w/ optional argument \\
+  $\jbpolicy[\joint\mu]$ & \verb|\jbpolicy[\joint\mu]| & Joint policy Bellman operator \\
   %
   \midrule
   %
-  $\qvdn, \vvdn, \avdn$ & \verb|\qvdn|, \verb|\vvdn|, \verb|\avdn| & VDN model(s) \\
+  $\fmix$ & \verb|\fmix| & Mixing function & $\fmix(\jh, \ja, Q_1(h_1), \ldots, Q_n(h_n))$ \\
   %
-  $\qmix, \vmix, \amix$ & \verb|\qmix|, \verb|\vmix|, \verb|\amix| & QMIX model(s) \\
+  $\fmono$ & \verb|\fmono| & Monotonic mixing function & $\fmono(u_1, \ldots, u_n)$ \\
   %
-  $\qtran, \vtran, \atran$ & \verb|\qtran|, \verb|\vtran|, \verb|\atran| & QTRAN model(s) \\
+  $\figm$ & \verb|\figm| & IGM mixing function & $\figm(\jh, \ja, Q_1(h_1), \ldots Q_n(h_n))$ \\
   %
-  $\wqmix, \wvmix, \wamix$ & \verb|\wqmix|, \verb|\wvmix|, \verb|\wamix| & WQMIX model(s) \\
+  \midrule
   %
-  $\qplex, \vplex, \aplex$ & \verb|\qplex|, \verb|\vplex|, \verb|\aplex| & QPLEX model(s) \\
+  $\qvdn$ & \verb|\qvdn| & VDN Q-model \\
   %
-  $\qfix, \vfix, \afix$ & \verb|\qfix|, \verb|\vfix|, \verb|\afix| & QFIX model(s) \\
+  $\vvdn$ & \verb|\vvdn| & VDN V-model \\
+  %
+  $\avdn$ & \verb|\avdn| & VDN A-model \\
+  %
+  \midrule
+  %
+  $\qmix$ & \verb|\qmix| & QMIX Q-model \\
+  %
+  $\vmix$ & \verb|\vmix| & QMIX V-model \\
+  %
+  $\amix$ & \verb|\amix| & QMIX A-model \\
+  %
+  \midrule
+  %
+  $\qtran$ & \verb|\qtran| & QTRAN Q-model \\
+  %
+  $\vtran$ & \verb|\vtran| & QTRAN V-model \\
+  %
+  $\atran$ & \verb|\atran| & QTRAN A-model \\
+  %
+  \midrule
+  %
+  $\wqmix$ & \verb|\wqmix| & WQMIX Q-model \\
+  %
+  $\wvmix$ & \verb|\wvmix| & WQMIX V-model \\
+  %
+  $\wamix$ & \verb|\wamix| & WQMIX A-model \\
+  %
+  \midrule
+  %
+  $\qplex$ & \verb|\qplex| & QPLEX Q-model \\
+  %
+  $\vplex$ & \verb|\vplex| & QPLEX V-model \\
+  %
+  $\aplex$ & \verb|\aplex| & QPLEX A-model \\
+  %
+  \midrule
+  %
+  $\qfix$ & \verb|\qfix| & QFIX Q-model \\
+  %
+  $\vfix$ & \verb|\vfix| & QFIX V-model \\
+  %
+  $\afix$ & \verb|\afix| & QFIX A-model \\
   %
   \bottomrule
   %
