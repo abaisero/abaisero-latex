@@ -107,7 +107,9 @@ If no options are provided, or none are enabled by the end of the processing, th
   %
   $\softmin$ & \verb|\softmin| & & $\softmin(x_1, \ldots, x_n) \doteq -\log\sum_i \exp(-x_i)$ \\
   %
-  $\softargmax$ & \verb|\softargmax| & a.k.a. softmax\footnotemark[1] & $\softargmax(x_1, \ldots, x_n)_i \doteq \frac{ \exp(x_i) }{ \sum_k \exp(x_k) } $ \\
+  $\softargmax$ & \verb|\softargmax| & a.k.a. softmax\footnotemark[1] & $\softargmax(x_1, \ldots, x_n)_i \doteq \frac{ \exp(x_i) }{ \sum_k \exp(x_k) }$ \\
+  %
+  $\softplus$ & \verb|\softplus| & Softplus function & $\softplus(x) \doteq \log\left( \exp(x) + 1 \right) = \softmax(x, 0)$ \\
   %
   \bottomrule
   %
