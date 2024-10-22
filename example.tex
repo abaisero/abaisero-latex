@@ -13,9 +13,6 @@
 
 \newcommand\option[1]{\texttt{#1}}
 
-\newcommand\xset{\mathcal{X}}
-\newcommand\yset{\mathcal{Y}}
-
 \interfootnotelinepenalty=10000
 
 \maketitle
@@ -35,6 +32,8 @@ If no options are provided, or none are enabled by the end of the processing, th
   \midrule
   %
   \option{all} & Enable all commands \\
+  %
+  \option{(no-)sets} & Disable/enable set commands \\
   %
   \option{(no-)math} & Disable/enable mathematical commands \\
   %
@@ -62,6 +61,34 @@ If no options are provided, or none are enabled by the end of the processing, th
 \end{table}
 
 \section{Commands}
+
+\subsection*{Option [sets]}
+
+\begin{tabular}{clll}
+  %
+  \toprule
+  %
+  Symbol & Command & Description & Example \\
+  %
+  \midrule
+  %
+  $\aset$ & \verb|\aset| & A set \\
+  %
+  $\bset$ & \verb|\bset| & B set \\
+  %
+  $\cset$ & \verb|\cset| & C set \\
+  %
+  \vdots & \vdots & \vdots \\
+  %
+  $\xset$ & \verb|\xset| & X set \\
+  %
+  $\yset$ & \verb|\yset| & Y set \\
+  %
+  $\zset$ & \verb|\zset| & Z set \\
+  %
+  \bottomrule
+  %
+\end{tabular}
 
 \subsection*{Option [math]}
 

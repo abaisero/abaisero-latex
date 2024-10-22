@@ -9,6 +9,10 @@
 \RequirePackage{mathtools}
 \RequirePackage[only,llbracket,rrbracket]{stmaryrd}
 
+\newif\if@sets
+\DeclareOption{sets}{\@setstrue}
+\DeclareOption{no-sets}{\@setsfalse}
+
 \newif\if@math
 \DeclareOption{math}{\@mathtrue}
 \DeclareOption{no-math}{\@mathfalse}
@@ -54,6 +58,7 @@
 \DeclareOption{no-utils}{\@utilsfalse}
 
 \DeclareOption{all}{
+  \@setstrue
   \@mathtrue
   \@linalgtrue
   \@optimtrue
@@ -75,6 +80,7 @@
 % enable all options if none of them are selected
 
 \newif\if@any
+\if@sets\@anytrue\fi
 \if@math\@anytrue\fi
 \if@linalg\@anytrue\fi
 \if@optim\@anytrue\fi
@@ -88,6 +94,7 @@
 \if@utils\@anytrue\fi
 
 \unless\if@any
+  \@setstrue
   \@mathtrue
   \@linalgtrue
   \@optimtrue
@@ -99,6 +106,37 @@
   \@theoremstrue
   \@misctrue
   \@utilstrue
+\fi
+
+\if@sets
+
+  \newcommand\aset{\mathcal{A}}
+  \newcommand\bset{\mathcal{B}}
+  \newcommand\cset{\mathcal{C}}
+  \newcommand\dset{\mathcal{D}}
+  \newcommand\eset{\mathcal{E}}
+  \newcommand\fset{\mathcal{F}}
+  \newcommand\gset{\mathcal{G}}
+  \newcommand\hset{\mathcal{H}}
+  \newcommand\iset{\mathcal{I}}
+  \newcommand\jset{\mathcal{J}}
+  \newcommand\kset{\mathcal{K}}
+  \newcommand\lset{\mathcal{L}}
+  \newcommand\mset{\mathcal{M}}
+  \newcommand\nset{\mathcal{N}}
+  \newcommand\oset{\mathcal{O}}
+  \newcommand\pset{\mathcal{P}}
+  \newcommand\qset{\mathcal{Q}}
+  \newcommand\rset{\mathcal{R}}
+  \newcommand\sset{\mathcal{S}}
+  \newcommand\tset{\mathcal{T}}
+  \newcommand\uset{\mathcal{U}}
+  \newcommand\vset{\mathcal{V}}
+  \newcommand\wset{\mathcal{W}}
+  \newcommand\xset{\mathcal{X}}
+  \newcommand\yset{\mathcal{Y}}
+  \newcommand\zset{\mathcal{Z}}
+
 \fi
 
 \if@math
@@ -193,12 +231,14 @@
 
 \if@rl
 
-  \newcommand\aset{\mathcal{A}}
-  \newcommand\bset{\mathcal{B}}
-  \newcommand\hset{\mathcal{H}}
-  \newcommand\oset{\mathcal{O}}
-  \newcommand\rset{\mathcal{R}}
-  \newcommand\sset{\mathcal{S}}
+  \unless\if@sets
+    \newcommand\aset{\mathcal{A}}
+    \newcommand\bset{\mathcal{B}}
+    \newcommand\hset{\mathcal{H}}
+    \newcommand\oset{\mathcal{O}}
+    \newcommand\rset{\mathcal{R}}
+    \newcommand\sset{\mathcal{S}}
+  \fi
 
   \newcommand\nohistory{\varepsilon}
 
